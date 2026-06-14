@@ -1,13 +1,6 @@
 import React from 'react';
 
-const games = [
-  { id: 2651280, title: "Marvel's Spider-Man 2" },
-  { id: 1091500, title: 'Cyberpunk 2077' },
-  { id: 292030, title: 'The Witcher 3' },
-  { id: 1174180, title: 'Red Dead Redemption 2' },
-  { id: 1151640, title: 'Horizon Zero Dawn' },
-  { id: 2322010, title: 'God of War Ragnarök' },
-];
+const heroImg = 'https://cdn.fastly.steamstatic.com/store/home/store_home_share.jpg';
 
 export default function HeroBanner(): React.ReactElement {
   return (
@@ -16,40 +9,26 @@ export default function HeroBanner(): React.ReactElement {
         position: 'relative',
         margin: '0 calc(-1 * var(--ifm-spacing-horizontal)) 1.5rem',
         width: 'calc(100% + 2 * var(--ifm-spacing-horizontal))',
-        height: 280,
+        height: 320,
         overflow: 'hidden',
         borderRadius: 0,
       }}
     >
-      <div
+      <img
+        src={heroImg}
+        alt=""
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gridTemplateRows: 'repeat(2, 1fr)',
           width: '100%',
           height: '100%',
+          objectFit: 'cover',
+          display: 'block',
         }}
-      >
-        {games.map((game) => (
-          <img
-            key={game.id}
-            src={`https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/${game.id}/header.jpg`}
-            alt=""
-            loading="lazy"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block',
-            }}
-          />
-        ))}
-      </div>
+      />
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to bottom, rgba(27,40,56,0.15) 0%, rgba(27,40,56,0.92) 100%)',
+          background: 'radial-gradient(ellipse at 50% 0%, transparent 20%, rgba(21,22,22,0.4) 50%, rgba(21,22,22,0.92) 100%)',
           pointerEvents: 'none',
         }}
       />
@@ -69,7 +48,7 @@ export default function HeroBanner(): React.ReactElement {
             fontSize: '2rem',
             fontWeight: 700,
             margin: 0,
-            textShadow: '0 2px 8px rgba(0,0,0,0.5)',
+            textShadow: '0 2px 12px rgba(0,0,0,0.6)',
           }}
         >
           The Balanced Backlog
@@ -77,9 +56,9 @@ export default function HeroBanner(): React.ReactElement {
         <p
           style={{
             color: '#c6d4df',
-            fontSize: '1rem',
+            fontSize: '1.05rem',
             margin: '6px 0 0',
-            textShadow: '0 1px 4px rgba(0,0,0,0.5)',
+            textShadow: '0 1px 6px rgba(0,0,0,0.6)',
             fontWeight: 400,
           }}
         >

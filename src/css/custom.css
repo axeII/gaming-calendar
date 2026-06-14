@@ -93,7 +93,8 @@ html {
 }
 
 body {
-  background: #1b2838;
+  background: radial-gradient(100% 100% at 45% 35%, #1e2c3a 0%, #151616 100%);
+  background-attachment: fixed;
   color: #d6e0e7;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -136,8 +137,27 @@ body {
 .navbar-sidebar {
   background: #171a21;
 }
+.theme-doc-sidebar-container {
+  background: #171a21;
+  border-right: 1px solid #1e2c3a;
+}
 .dropdown__menu {
   animation: dropdownFadeIn 0.12s ease-out;
+  background: #2c3138;
+  border: 1px solid #3b414a;
+  border-radius: 3px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  padding: 4px 0;
+}
+.dropdown__link {
+  font-size: 0.8rem;
+  padding: 6px 16px;
+  transition: background 0.1s;
+  border-radius: 0;
+}
+.dropdown__link:hover {
+  background: #1a9fff;
+  color: #ffffff;
 }
 @keyframes dropdownFadeIn {
   from { opacity: 0; transform: translateY(-4px); }
@@ -147,6 +167,7 @@ body {
 .menu {
   font-weight: 400;
   font-size: 0.85rem;
+  padding: 8px 4px;
 }
 .menu__link {
   font-size: 0.82rem;
@@ -156,10 +177,14 @@ body {
 }
 .menu__link:hover {
   background: #1e2c3a;
+  color: #ffffff;
 }
 .menu__link--active {
   color: #ffffff;
   font-weight: 600;
+  background: #1e2c3a;
+}
+.menu__list-item-collapsible:hover {
   background: #1e2c3a;
 }
 
@@ -224,14 +249,15 @@ h1 {
   letter-spacing: -0.01em;
 }
 h2 {
-  font-size: 1.05rem;
-  color: #acb8c4;
+  font-size: 0.9rem;
+  color: #c6d4df;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   font-weight: 600;
   margin: 28px 0 12px;
-  padding-bottom: 7px;
-  border-bottom: 1px solid #2a3a4a;
+  padding: 8px 14px;
+  background: linear-gradient(to right, #3b414a, #2c3138);
+  border-radius: 3px;
 }
 h2:first-of-type {
   margin-top: 16px;
@@ -256,15 +282,6 @@ h3 {
   background: #16202d;
   border-left: 3px solid #a4d007;
   color: #d6e0e7;
-}
-
-code {
-  background: #1e2c3a;
-  border: 1px solid #2a3a4a;
-  color: #d6e0e7;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 0.85em;
 }
 
 .pagination-nav__link {
@@ -305,7 +322,8 @@ a:hover {
 }
 
 .main-wrapper {
-  background: #1b2838;
+  background: radial-gradient(100% 100% at 45% 35%, #1e2c3a 0%, #151616 100%);
+  background-attachment: fixed;
 }
 
 .card-link {
@@ -313,17 +331,35 @@ a:hover {
   cursor: pointer;
 }
 .card-link:hover {
-  border-color: #67c1f5 !important;
+  border-color: #1a9fff !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 .card-link:active {
   transform: translateY(0);
 }
 
-.main-wrapper > .container {
-  animation: contentFadeIn 0.25s ease-out;
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-Main-styles-module,
+main .container {
+  animation: contentFadeIn 0.3s ease-out;
 }
+
+code {
+  background: #2c3138;
+  border: 1px solid #3b414a;
+  color: #e6eaef;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+.theme-doc-sidebar-menu .menu__list-item-collapsible button {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: #8091a2;
+}
+
 @keyframes contentFadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }

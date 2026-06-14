@@ -58,15 +58,13 @@ export default function GameCard({ title, genre, notes, steamAppId, hours, statu
         borderRadius: 3,
         overflow: 'hidden',
         marginBottom: 10,
-        border: '1px solid transparent',
-        borderColor: hovered ? '#67c1f544' : 'transparent',
-        transition: 'border-color 0.2s, box-shadow 0.2s, transform 0.2s',
+        transition: 'box-shadow 0.2s, transform 0.2s',
         transform: hovered ? 'translateY(-1px)' : 'none',
-        boxShadow: hovered ? '0 4px 16px rgba(0,0,0,0.3)' : 'none',
+        boxShadow: hovered ? '0 4px 20px rgba(0,0,0,0.4)' : '0 1px 3px rgba(0,0,0,0.2)',
       }}
     >
       {imgUrl && (
-        <div style={{ flexShrink: 0, width: 280, minHeight: 130 }}>
+        <div style={{ flexShrink: 0, width: 324, minHeight: 151, position: 'relative' }}>
           <img
             src={imgUrl}
             alt={`${title} header`}
@@ -75,39 +73,52 @@ export default function GameCard({ title, genre, notes, steamAppId, hours, statu
               height: '100%',
               objectFit: 'cover',
               display: 'block',
-              transition: 'opacity 0.2s',
-              opacity: hovered ? 1 : 0.92,
+              filter: hovered ? 'brightness(1.05)' : 'brightness(0.95)',
+              transition: 'filter 0.3s',
             }}
             loading="lazy"
           />
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: hovered ? 'linear-gradient(135deg, rgba(26,159,255,0.08) 0%, transparent 60%)' : 'transparent',
+              transition: 'background 0.3s',
+              pointerEvents: 'none',
+            }}
+          />
         </div>
       )}
-      <div style={{ flex: 1, padding: '14px 18px', minWidth: 0 }}>
-        <div style={{ fontWeight: 600, fontSize: '0.95rem', color: '#d6e0e7', marginBottom: 3 }}>
-          {title}
+      <div style={{ flex: 1, padding: '14px 18px', minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div style={{ marginBottom: 4 }}>
+          <span style={{ fontWeight: 600, fontSize: '0.95rem', color: '#d6e0e7' }}>
+            {title}
+          </span>
+          {status && (
+            <span style={{ ...statusStyles[status], marginLeft: 10 }}>{status}</span>
+          )}
         </div>
-        <div style={{ fontSize: '0.78rem', color: '#acb8c4', marginBottom: 8 }}>
-          <em>{genre}</em>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6, flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '0.78rem', color: '#acb8c4' }}>
+            <em>{genre}</em>
+          </span>
+          {hours && (
+            <span style={{ fontSize: '0.75rem', color: '#8091a2' }}>~{hours}</span>
+          )}
         </div>
         {notes && (
-          <div style={{ fontSize: '0.85rem', color: '#c6d4df', marginBottom: 12, lineHeight: 1.5 }}>
+          <div style={{ fontSize: '0.85rem', color: '#c6d4df', lineHeight: 1.5 }}>
             {notes}
           </div>
         )}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
-          {status && (
-            <span style={statusStyles[status]}>{status}</span>
-          )}
-          {hours && (
-            <span style={{ fontSize: '0.78rem', color: '#acb8c4' }}>~{hours}</span>
-          )}
-          {steamAppId && (
+        {steamAppId && (
+          <div style={{ marginTop: notes ? 8 : 0 }}>
             <a
               href={`https://store.steampowered.com/app/${steamAppId}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                fontSize: '0.78rem',
+                fontSize: '0.75rem',
                 color: '#67c1f5',
                 textDecoration: 'none',
                 transition: 'color 0.15s',
@@ -115,8 +126,8 @@ export default function GameCard({ title, genre, notes, steamAppId, hours, statu
             >
               View on Steam ›
             </a>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );
