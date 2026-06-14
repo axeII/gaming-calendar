@@ -55,7 +55,8 @@ const config: Config = {
       },
       items: [
         {
-          to: '/docs/now-playing',
+          type: 'doc',
+          docId: 'now-playing',
           position: 'left',
           label: 'Now Playing',
         },
