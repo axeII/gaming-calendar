@@ -1,0 +1,14 @@
+{
+  "steam": {
+    "id": "76561198216855980",
+    "profileUrl": "https://steamcommunity.com/profiles/76561198216855980"
+  },
+  "pc": {
+    "os": "CachyOS (Arch Linux)",
+    "cpu": "AMD Ryzen 5 5600X 6-Core Processor",
+    "ram": "31 GB",
+    "gpu": "AMD Radeon RX 9070 XT (RDNA 4, Navi 48) — 16 GB VRAM",
+    "driver": "Mesa 26.1.0 (radeonsi, gfx1201, ACO)",
+    "kernel": "7.0.11-1-cachyos"
+  }
+}
