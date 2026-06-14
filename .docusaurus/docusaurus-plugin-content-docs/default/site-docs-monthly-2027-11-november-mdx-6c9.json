@@ -1,0 +1,26 @@
+{
+  "id": "monthly/2027-11-november",
+  "title": "November 2027 — *Holiday Blockbuster*",
+  "description": "<GameCard",
+  "source": "@site/docs/monthly/2027-11-november.mdx",
+  "sourceDirName": "monthly",
+  "slug": "/monthly/2027-11-november",
+  "permalink": "/gaming-calendar/docs/monthly/2027-11-november",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/axeII/gaming-calendar/tree/main/docs/monthly/2027-11-november.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "November 2027"
+  },
+  "sidebar": "calendarSidebar",
+  "previous": {
+    "title": "October 2027",
+    "permalink": "/gaming-calendar/docs/monthly/2027-10-october"
+  },
+  "next": {
+    "title": "Dec 2027 – Jan 2028",
+    "permalink": "/gaming-calendar/docs/monthly/2027-12-2028-01-december-january"
+  }
+}

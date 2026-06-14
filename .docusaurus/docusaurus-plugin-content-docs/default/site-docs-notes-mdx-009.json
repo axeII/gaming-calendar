@@ -1,0 +1,22 @@
+{
+  "id": "notes",
+  "title": "Notes & Overflow",
+  "description": "- Baldur's Gate 3 Co-op — Act 3, once a week. Expected completion ~mid-July 2026. Solo playthrough is a 2028 goal.",
+  "source": "@site/docs/notes.mdx",
+  "sourceDirName": ".",
+  "slug": "/notes",
+  "permalink": "/gaming-calendar/docs/notes",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/axeII/gaming-calendar/tree/main/docs/notes.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "Notes & Overflow"
+  },
+  "sidebar": "calendarSidebar",
+  "previous": {
+    "title": "Mood Cheat Sheet",
+    "permalink": "/gaming-calendar/docs/mood-cheat-sheet"
+  }
+}
