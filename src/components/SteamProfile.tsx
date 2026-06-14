@@ -1,34 +1,28 @@
 import React from 'react';
+import { ExternalLink, Gamepad2 } from 'lucide-react';
 import metadata from '@site/src/data/metadata.json';
 
 export default function SteamProfile(): React.ReactElement {
   const { steam } = metadata;
 
   return (
-    <div
-      style={{
-        border: '1px solid #253545',
-        borderRadius: 3,
-        padding: '0 14px 10px',
-        marginBottom: '12px',
-        background: '#16202d',
-      }}
-    >
-      <div style={{ fontSize: '0.7rem', color: '#8091a2', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.04em', paddingBottom: '5px', borderBottom: '1px solid #2a3a4a' }}>
+    <div className="profile-card">
+      <div className="profile-card__header">
         Steam Profile
       </div>
-      <div style={{ fontSize: '0.8rem' }}>
+      <div>
         <a
           href={steam.profileUrl}
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: '#67c1f5', textDecoration: 'none' }}
+          className="profile-card__link"
         >
-          View Steam Profile ›
+          <Gamepad2 size={14} style={{ verticalAlign: 'middle', marginRight: 6 }} />
+          View Steam Profile <ExternalLink size={11} style={{ verticalAlign: 'middle', marginLeft: 2 }} />
         </a>
       </div>
-      <div style={{ fontSize: '0.72rem', color: '#8091a2', marginTop: '4px' }}>
-        Steam ID: <code style={{ background: '#1e2c3a', border: '1px solid #2a3a4a', color: '#c6d4df', padding: '1px 4px', borderRadius: 2 }}>{steam.id}</code>
+      <div className="profile-card__id">
+        Steam ID: <code>{steam.id}</code>
       </div>
     </div>
   );

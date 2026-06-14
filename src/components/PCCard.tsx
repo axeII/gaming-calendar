@@ -1,34 +1,14 @@
 import React from 'react';
+import { Monitor, Cpu, HardDrive, MonitorUp, Wrench, Terminal } from 'lucide-react';
 import metadata from '@site/src/data/metadata.json';
 
-const chipStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  gap: '0.15rem',
-  padding: '0.4rem 0.6rem',
-  borderRadius: 2,
-  background: '#16202d',
-  border: '1px solid #253545',
-  minWidth: 0,
-};
-
-const labelStyle: React.CSSProperties = {
-  fontSize: '0.55rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  color: '#8091a2',
-  whiteSpace: 'nowrap',
-};
-
-const valueStyle: React.CSSProperties = {
-  fontSize: '0.7rem',
-  fontWeight: 600,
-  color: '#c6d4df',
-  textAlign: 'center',
-  wordBreak: 'break-word',
-  lineHeight: 1.3,
+const specIcons: Record<string, React.ReactNode> = {
+  OS: <Monitor size={12} />,
+  CPU: <Cpu size={12} />,
+  RAM: <HardDrive size={12} />,
+  GPU: <MonitorUp size={12} />,
+  Driver: <Wrench size={12} />,
+  Kernel: <Terminal size={12} />,
 };
 
 export default function PCCard(): React.ReactElement {
@@ -44,29 +24,18 @@ export default function PCCard(): React.ReactElement {
   ];
 
   return (
-    <div
-      style={{
-        border: '1px solid #253545',
-        borderRadius: 3,
-        padding: '0 14px 10px',
-        marginBottom: '12px',
-        background: '#16202d',
-      }}
-    >
-      <div style={{ fontSize: '0.7rem', color: '#8091a2', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.04em', paddingBottom: '5px', borderBottom: '1px solid #2a3a4a' }}>
+    <div className="spec-card">
+      <div className="spec-card__header">
         Gaming PC
       </div>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '0.5rem',
-        }}
-      >
+      <div className="spec-card__grid">
         {specs.map((s) => (
-          <div key={s.label} style={chipStyle}>
-            <span style={labelStyle}>{s.label}</span>
-            <span style={valueStyle}>{s.value}</span>
+          <div key={s.label} className="spec-card__chip">
+            <span className="spec-card__label">
+              {specIcons[s.label] && <span style={{ marginRight: 4, verticalAlign: 'middle' }}>{specIcons[s.label]}</span>}
+              {s.label}
+            </span>
+            <span className="spec-card__value">{s.value}</span>
           </div>
         ))}
       </div>
