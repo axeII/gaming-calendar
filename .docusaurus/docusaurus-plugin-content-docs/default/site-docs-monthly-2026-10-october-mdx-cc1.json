@@ -1,0 +1,26 @@
+{
+  "id": "monthly/2026-10-october",
+  "title": "October 2026 — *Spooky Season*",
+  "description": "<GameCard",
+  "source": "@site/docs/monthly/2026-10-october.mdx",
+  "sourceDirName": "monthly",
+  "slug": "/monthly/2026-10-october",
+  "permalink": "/gaming-calendar/docs/monthly/2026-10-october",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/axeII/gaming-calendar/tree/main/docs/monthly/2026-10-october.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "October 2026"
+  },
+  "sidebar": "calendarSidebar",
+  "previous": {
+    "title": "September 2026",
+    "permalink": "/gaming-calendar/docs/monthly/2026-09-september"
+  },
+  "next": {
+    "title": "November 2026",
+    "permalink": "/gaming-calendar/docs/monthly/2026-11-november"
+  }
+}

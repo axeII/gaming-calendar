@@ -1,0 +1,26 @@
+{
+  "id": "mood-cheat-sheet",
+  "title": "Mood Balance Cheat Sheet",
+  "description": "| Month | Vibe | Why It Works |",
+  "source": "@site/docs/mood-cheat-sheet.md",
+  "sourceDirName": ".",
+  "slug": "/mood-cheat-sheet",
+  "permalink": "/gaming-calendar/docs/mood-cheat-sheet",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/axeII/gaming-calendar/tree/main/docs/mood-cheat-sheet.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "Mood Cheat Sheet"
+  },
+  "sidebar": "calendarSidebar",
+  "previous": {
+    "title": "Beers & Friends",
+    "permalink": "/gaming-calendar/docs/beers-and-friends"
+  },
+  "next": {
+    "title": "Notes & Overflow",
+    "permalink": "/gaming-calendar/docs/notes"
+  }
+}

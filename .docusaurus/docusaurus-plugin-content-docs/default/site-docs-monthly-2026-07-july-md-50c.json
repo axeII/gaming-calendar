@@ -1,0 +1,26 @@
+{
+  "id": "monthly/2026-07-july",
+  "title": "July 2026 — *Summer of Fear & Ocean*",
+  "description": "| Game | Genre | Notes |",
+  "source": "@site/docs/monthly/2026-07-july.md",
+  "sourceDirName": "monthly",
+  "slug": "/monthly/2026-07-july",
+  "permalink": "/gaming-calendar/docs/monthly/2026-07-july",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/axeII/gaming-calendar/tree/main/docs/monthly/2026-07-july.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "July 2026"
+  },
+  "sidebar": "calendarSidebar",
+  "previous": {
+    "title": "June 2026",
+    "permalink": "/gaming-calendar/docs/monthly/2026-06-june"
+  },
+  "next": {
+    "title": "August 2026",
+    "permalink": "/gaming-calendar/docs/monthly/2026-08-august"
+  }
+}

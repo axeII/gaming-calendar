@@ -1,0 +1,18 @@
+{
+  "id": "index",
+  "title": "The Balanced Backlog",
+  "description": "\"I just finished Spider-Man. What now?\"",
+  "source": "@site/docs/index.mdx",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/gaming-calendar/docs/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/axeII/gaming-calendar/tree/main/docs/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "Overview",
+    "slug": "/"
+  }
+}

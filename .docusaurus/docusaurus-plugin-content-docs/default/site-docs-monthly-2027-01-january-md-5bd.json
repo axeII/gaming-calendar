@@ -1,0 +1,26 @@
+{
+  "id": "monthly/2027-01-january",
+  "title": "January 2027 — *New Year Adventures*",
+  "description": "| Game | Genre | Notes |",
+  "source": "@site/docs/monthly/2027-01-january.md",
+  "sourceDirName": "monthly",
+  "slug": "/monthly/2027-01-january",
+  "permalink": "/gaming-calendar/docs/monthly/2027-01-january",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/axeII/gaming-calendar/tree/main/docs/monthly/2027-01-january.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "January 2027"
+  },
+  "sidebar": "calendarSidebar",
+  "previous": {
+    "title": "December 2026",
+    "permalink": "/gaming-calendar/docs/monthly/2026-12-december"
+  },
+  "next": {
+    "title": "Feb – Mar 2027",
+    "permalink": "/gaming-calendar/docs/monthly/2027-02-03-feb-march"
+  }
+}
