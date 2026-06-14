@@ -1,41 +1,33 @@
-# Website
+# Gaming Calendar 🎮
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A balanced backlog schedule for 2026–2027, built with [Docusaurus](https://docusaurus.io/).
 
-## Installation
+**Live site:** https://axeII.github.io/gaming-calendar/
 
-```bash
-yarn
-```
+## What's Inside
+
+- **Monthly calendar** — Curated game selections balanced by mood, season, and genre
+- **Shopping list** — Steam sale price analysis and buying advice
+- **Beers & Friends** — Co-op and social games running outside the solo schedule
+- **Notes & overflow** — Guidelines for staying on track
 
 ## Local Development
 
 ```bash
-yarn start
+npm install
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Opens at `http://localhost:3000/gaming-calendar/`.
 
 ## Build
 
 ```bash
-yarn build
+npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Static files go to `build/`.
 
-## Deployment
+## License
 
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+MIT
