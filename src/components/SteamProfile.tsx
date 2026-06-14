@@ -7,27 +7,28 @@ export default function SteamProfile(): React.ReactElement {
   return (
     <div
       style={{
-        border: '1px solid var(--ifm-color-emphasis-300)',
-        borderRadius: 'var(--ifm-card-border-radius)',
-        padding: '1rem 1.25rem',
-        marginBottom: '1rem',
-        background: 'var(--ifm-card-background-color)',
+        border: '1px solid #253545',
+        borderRadius: 3,
+        padding: '0 14px 10px',
+        marginBottom: '12px',
+        background: '#16202d',
       }}
     >
-      <div style={{ fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--ifm-color-emphasis-600)' }}>
+      <div style={{ fontSize: '0.7rem', color: '#8091a2', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.04em', paddingBottom: '5px', borderBottom: '1px solid #2a3a4a' }}>
         Steam Profile
       </div>
-      <div style={{ fontSize: '0.9rem' }}>
+      <div style={{ fontSize: '0.8rem' }}>
         <a
           href={steam.profileUrl}
           target="_blank"
           rel="noopener noreferrer"
+          style={{ color: '#67c1f5', textDecoration: 'none' }}
         >
-          View Steam Profile →
+          View Steam Profile ›
         </a>
       </div>
-      <div style={{ fontSize: '0.8rem', color: 'var(--ifm-color-emphasis-500)', marginTop: '0.3rem' }}>
-        Steam ID: <code>{steam.id}</code>
+      <div style={{ fontSize: '0.72rem', color: '#8091a2', marginTop: '4px' }}>
+        Steam ID: <code style={{ background: '#1e2c3a', border: '1px solid #2a3a4a', color: '#c6d4df', padding: '1px 4px', borderRadius: 2 }}>{steam.id}</code>
       </div>
     </div>
   );

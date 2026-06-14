@@ -9,11 +9,35 @@ interface GameCardProps {
   status?: 'playing' | 'next' | 'scheduled' | 'completed';
 }
 
-const statusColors: Record<string, string> = {
-  playing: '#22c55e',
-  next: '#3b82f6',
-  scheduled: '#6b7280',
-  completed: '#8b5cf6',
+const statusStyles: Record<string, React.CSSProperties> = {
+  playing: {
+    color: '#a4d007',
+    fontWeight: 700,
+    fontSize: '0.65rem',
+    textTransform: 'uppercase',
+    letterSpacing: '0.04em',
+  },
+  next: {
+    color: '#67c1f5',
+    fontWeight: 600,
+    fontSize: '0.65rem',
+    textTransform: 'uppercase',
+    letterSpacing: '0.04em',
+  },
+  scheduled: {
+    color: '#8091a2',
+    fontWeight: 600,
+    fontSize: '0.65rem',
+    textTransform: 'uppercase',
+    letterSpacing: '0.04em',
+  },
+  completed: {
+    color: '#8b5cf6',
+    fontWeight: 600,
+    fontSize: '0.65rem',
+    textTransform: 'uppercase',
+    letterSpacing: '0.04em',
+  },
 };
 
 export default function GameCard({ title, genre, notes, steamAppId, hours, status }: GameCardProps): React.ReactElement {
@@ -25,17 +49,16 @@ export default function GameCard({ title, genre, notes, steamAppId, hours, statu
     <div
       style={{
         display: 'flex',
-        gap: '1rem',
+        gap: 0,
         alignItems: 'stretch',
-        border: '1px solid var(--ifm-color-emphasis-300)',
-        borderRadius: 'var(--ifm-card-border-radius)',
+        background: '#16202d',
+        borderRadius: 3,
         overflow: 'hidden',
-        marginBottom: '1rem',
-        background: 'var(--ifm-card-background-color)',
+        marginBottom: 6,
       }}
     >
       {imgUrl && (
-        <div style={{ flexShrink: 0, width: 180, minHeight: 84 }}>
+        <div style={{ flexShrink: 0, width: 280, minHeight: 130 }}>
           <img
             src={imgUrl}
             alt={`${title} header`}
@@ -44,53 +67,49 @@ export default function GameCard({ title, genre, notes, steamAppId, hours, statu
           />
         </div>
       )}
-      <div style={{ flex: 1, padding: '0.75rem 1rem 0.75rem 0' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-          <strong style={{ fontSize: '1.05rem' }}>{title}</strong>
-          {status && (
-            <span
-              style={{
-                display: 'inline-block',
-                padding: '0.1rem 0.5rem',
-                borderRadius: 999,
-                fontSize: '0.7rem',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '0.03em',
-                background: statusColors[status] + '22',
-                color: statusColors[status],
-                border: `1px solid ${statusColors[status]}44`,
-              }}
-            >
-              {status}
-            </span>
-          )}
-          {hours && (
-            <span style={{ fontSize: '0.8rem', color: 'var(--ifm-color-emphasis-600)' }}>
-              ~{hours}
-            </span>
-          )}
+      <div style={{ flex: 1, padding: '10px 14px', minWidth: 0 }}>
+        <div style={{ fontWeight: 600, fontSize: '0.9rem', color: '#c6d4df', marginBottom: 2 }}>
+          {title}
         </div>
-        <div style={{ fontSize: '0.85rem', color: 'var(--ifm-color-emphasis-700)', marginTop: '0.15rem' }}>
+        <div style={{ fontSize: '0.7rem', color: '#8f98a0', marginBottom: 6 }}>
           <em>{genre}</em>
         </div>
+        <div style={{ display: 'flex', gap: 3, flexWrap: 'wrap', marginBottom: 6 }}>
+          <span
+            style={{
+              background: '#2a3f50',
+              color: '#67c1f5',
+              fontSize: '0.6rem',
+              padding: '2px 6px',
+              borderRadius: 2,
+            }}
+          >
+            {genre.split('/')[0].trim()}
+          </span>
+        </div>
         {notes && (
-          <div style={{ fontSize: '0.9rem', marginTop: '0.35rem', color: 'var(--ifm-color-emphasis-600)' }}>
+          <div style={{ fontSize: '0.78rem', color: '#8091a2', marginBottom: 8 }}>
             {notes}
           </div>
         )}
-        {steamAppId && (
-          <div style={{ marginTop: '0.35rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+          {status && (
+            <span style={statusStyles[status]}>{status}</span>
+          )}
+          {hours && (
+            <span style={{ fontSize: '0.72rem', color: '#8091a2' }}>~{hours}</span>
+          )}
+          {steamAppId && (
             <a
               href={`https://store.steampowered.com/app/${steamAppId}`}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ fontSize: '0.8rem' }}
+              style={{ fontSize: '0.72rem', color: '#67c1f5', textDecoration: 'none' }}
             >
-              View on Steam →
+              View on Steam ›
             </a>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

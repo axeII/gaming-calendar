@@ -1,0 +1,246 @@
+```html
+<style>
+.mockup { background: #1b2838; padding: 16px; border-radius: 4px; margin-bottom: 0; overflow: hidden; font-family: Arial, Helvetica, sans-serif; font-size: 13px; }
+.steam-nav { background: #171a21; padding: 8px 16px; display: flex; align-items: center; gap: 16px; margin-bottom: 14px; border-radius: 2px; }
+.steam-nav .logo { color: #b8b6b4; font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.06em; margin-right: 8px; }
+.steam-nav .nlink { color: #b8b6b4; font-size: 0.7rem; text-transform: uppercase; cursor: default; }
+.steam-nav .nlink.active { color: #1a9fff; }
+.steam-bg { background: #1b2838; }
+.s-game { background: #16202d; display: flex; margin-bottom: 6px; border-radius: 3px; overflow: hidden; }
+.s-game .img { width: 240px; height: 111px; flex-shrink: 0; background: linear-gradient(135deg, #1a3a5a, #0a1a2a); display: flex; align-items: center; justify-content: center; color: #3a6a8a; font-size: 0.65rem; }
+.s-game .info { padding: 10px 14px; flex: 1; }
+.s-game .t { color: #c6d4df; font-size: 0.9rem; margin: 0 0 2px; font-weight: 600; }
+.s-game .g { color: #8f98a0; font-size: 0.7rem; margin: 0 0 6px; }
+.s-game .tags { display: flex; gap: 4px; margin-bottom: 6px; }
+.s-game .tag { background: #2a3f50; color: #67c1f5; font-size: 0.6rem; padding: 2px 6px; border-radius: 2px; }
+.s-game .note { color: #8091a2; font-size: 0.75rem; margin: 0 0 6px; }
+.s-game .mid { display: flex; align-items: center; gap: 8px; }
+.s-game .green { color: #a4d007; font-weight: 700; font-size: 0.8rem; }
+.s-game .blue { color: #67c1f5; font-size: 0.72rem; }
+.s-game .hours { color: #8091a2; font-size: 0.72rem; }
+.steam-head { font-size: 0.7rem; color: #8091a2; text-transform: uppercase; letter-spacing: 0.04em; margin: 12px 0 8px; border-bottom: 1px solid #2a3a4a; padding-bottom: 4px; }
+.steam-specs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.steam-specs .chip { background: #16202d; padding: 4px 10px; border-radius: 2px; text-align: center; }
+.steam-specs .chip .l { color: #8091a2; font-size: 0.55rem; text-transform: uppercase; }
+.steam-specs .chip .v { color: #c6d4df; font-size: 0.7rem; font-weight: 600; }
+
+.docu-nav { background: #242526; padding: 10px 16px; display: flex; align-items: center; gap: 14px; margin-bottom: 14px; border-radius: 6px; }
+.docu-nav .logo { color: #a78bfa; font-weight: 700; font-size: 1.1rem; }
+.docu-nav .nlink { color: #aaa; font-size: 0.8rem; cursor: default; }
+.docu-bg { background: #1e1e1e; font-family: system-ui, sans-serif; font-size: 14px; }
+.d-game { background: #2a2a2a; border: 1px solid #3a3a3a; display: flex; border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+.d-game .img { width: 180px; height: 84px; flex-shrink: 0; background: linear-gradient(135deg, #3a1a5a, #1a0a2a); display: flex; align-items: center; justify-content: center; color: #5a3a7a; font-size: 0.6rem; }
+.d-game .info { padding: 10px 12px; flex: 1; }
+.d-game .t { color: #f0f0f0; font-size: 0.95rem; margin: 0 0 2px; font-weight: 600; }
+.d-game .g { color: #999; font-size: 0.75rem; margin: 0 0 5px; font-style: italic; }
+.d-game .badge { display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: 600; text-transform: uppercase; margin-right: 6px; }
+.d-game .badge.green { background: #22c55e33; color: #22c55e; border: 1px solid #22c55e44; }
+.d-game .badge.blue { background: #3b82f633; color: #3b82f6; border: 1px solid #3b82f644; }
+.d-game .note { color: #aaa; font-size: 0.8rem; margin: 3px 0 0; }
+.d-game .link { color: #a78bfa; font-size: 0.72rem; margin-top: 4px; display: inline-block; }
+
+.mod-game { background: #19222b; border: 1px solid #253545; display: flex; border-radius: 3px; overflow: hidden; margin-bottom: 6px; }
+.mod-game .img { width: 220px; height: 102px; flex-shrink: 0; background: linear-gradient(135deg, #1a3a5a, #0a1a2a); display: flex; align-items: center; justify-content: center; color: #3a6a8a; font-size: 0.65rem; }
+.mod-game .info { padding: 10px 14px; flex: 1; }
+.mod-game .t { color: #c6d4df; font-size: 0.9rem; margin: 0 0 3px; font-weight: 600; }
+.mod-game .g { color: #8f98a0; font-size: 0.72rem; margin: 0 0 6px; }
+.mod-game .note { color: #8091a2; font-size: 0.78rem; margin: 0 0 8px; }
+.mod-game .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mod-game .play { color: #a4d007; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
+.mod-game .steamlink { color: #67c1f5; font-size: 0.72rem; text-decoration: none; }
+.mod-game .hours { color: #8091a2; font-size: 0.72rem; }
+.mod-head { font-size: 0.7rem; color: #8091a2; text-transform: uppercase; letter-spacing: 0.04em; margin: 12px 0 8px; padding-bottom: 5px; border-bottom: 1px solid #2a3f50; }
+
+h3 { margin-top: 0; }
+</style>
+
+<h2>Which Steam-inspired design should we use?</h2>
+<p class="subtitle">Showing the "Now Playing" page in 3 styles. Pick your favorite.</p>
+
+<div class="cards">
+  <div class="card" data-choice="full" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">A: Full Steam Reskin</div>
+        <div class="mockup-body" style="padding: 0;">
+          <div class="steam-bg" style="padding: 12px 16px;">
+            <div class="steam-nav">
+              <span class="logo">GAMING CALENDAR</span>
+              <span class="nlink active">NOW PLAYING</span>
+              <span class="nlink">CALENDAR</span>
+              <span class="nlink" style="margin-left:auto">GITHUB</span>
+            </div>
+            <div class="steam-specs">
+              <div class="chip"><div class="l">OS</div><div class="v">CachyOS</div></div>
+              <div class="chip"><div class="l">CPU</div><div class="v">Ryzen 5 5600X</div></div>
+              <div class="chip"><div class="l">RAM</div><div class="v">31GB</div></div>
+              <div class="chip"><div class="l">GPU</div><div class="v">RX 9070 XT</div></div>
+              <div class="chip"><div class="l">Driver</div><div class="v">Mesa 24.3.4</div></div>
+              <div class="chip"><div class="l">Kernel</div><div class="v">7.0.8-cachyos</div></div>
+            </div>
+            <div class="steam-head">SOLO TRACK</div>
+            <div class="s-game">
+              <div class="img">Nobody Wants to Die<br>capsule img</div>
+              <div class="info">
+                <p class="t">Nobody Wants to Die</p>
+                <p class="g">Noir / Drama</p>
+                <div class="tags"><span class="tag">Detective</span></div>
+                <p class="note">Short detective story, perfect palate cleanser after Spider-Man.</p>
+                <div class="mid">
+                  <span class="green">PLAYING</span>
+                  <span class="hours">~6-8 hrs</span>
+                  <span class="blue">View on Steam ›</span>
+                </div>
+              </div>
+            </div>
+            <div class="s-game">
+              <div class="img">Tomb Raider 2013<br>capsule img</div>
+              <div class="info">
+                <p class="t">Tomb Raider (2013)</p>
+                <p class="g">Action-Adventure</p>
+                <div class="tags"><span class="tag">Third Person</span></div>
+                <p class="note">Next up after NWTD. May slip to July if friend time eats June.</p>
+                <div class="mid">
+                  <span class="blue">NEXT</span>
+                  <span class="hours">~15 hrs</span>
+                  <span class="blue">View on Steam ›</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A: Full Steam Reskin</h3>
+      <p>Complete overhaul: #1b2838 backgrounds, #171a21 nav, Steam green (#a4d007) accents, #67c1f5 links, compact Steam typography.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="cards" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">B: Steam Cards + Purple Keep</div>
+        <div class="mockup-body" style="padding: 0;">
+          <div class="docu-bg" style="padding: 12px 16px;">
+            <div class="docu-nav">
+              <span class="logo">Gaming Calendar</span>
+              <span class="nlink" style="color:#fff">Now Playing</span>
+              <span class="nlink">Calendar</span>
+              <span class="nlink" style="margin-left:auto">GitHub</span>
+            </div>
+            <div class="steam-specs">
+              <div class="chip"><div class="l">OS</div><div class="v">CachyOS</div></div>
+              <div class="chip"><div class="l">CPU</div><div class="v">Ryzen 5 5600X</div></div>
+              <div class="chip"><div class="l">RAM</div><div class="v">31GB</div></div>
+              <div class="chip"><div class="l">GPU</div><div class="v">RX 9070 XT</div></div>
+              <div class="chip"><div class="l">Driver</div><div class="v">Mesa 24.3.4</div></div>
+              <div class="chip"><div class="l">Kernel</div><div class="v">7.0.8-cachyos</div></div>
+            </div>
+            <div class="steam-head">SOLO TRACK</div>
+            <div class="mod-game">
+              <div class="img">Nobody Wants to Die<br>capsule img</div>
+              <div class="info">
+                <p class="t">Nobody Wants to Die</p>
+                <p class="g">Noir / Drama</p>
+                <p class="note">Short detective story, perfect palate cleanser after Spider-Man.</p>
+                <div class="row">
+                  <span class="play">PLAYING</span>
+                  <span class="hours">~6-8 hrs</span>
+                  <span class="steamlink">View on Steam ›</span>
+                </div>
+              </div>
+            </div>
+            <div class="mod-game">
+              <div class="img">Tomb Raider 2013<br>capsule img</div>
+              <div class="info">
+                <p class="t">Tomb Raider (2013)</p>
+                <p class="g">Action-Adventure</p>
+                <p class="note">Next up after NWTD. May slip to July.</p>
+                <div class="row">
+                  <span class="hours">~15 hrs</span>
+                  <span class="steamlink">View on Steam ›</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B: Steam Card Redesign</h3>
+      <p>Keep Docusaurus purple header/theme. Only game cards and spec chips redesigned in Steam dark palette. Less invasive.</p>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:16px">
+  <div class="card" data-choice="current" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">C: Current Design (for comparison)</div>
+        <div class="mockup-body" style="padding: 0;">
+          <div class="docu-bg" style="padding: 12px 16px;">
+            <div class="docu-nav">
+              <span class="logo">Gaming Calendar</span>
+              <span class="nlink" style="color:#fff">Now Playing</span>
+              <span class="nlink">Calendar</span>
+              <span class="nlink" style="margin-left:auto">GitHub</span>
+            </div>
+            <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;">
+              <div style="background:#2a2a2a; padding: 4px 10px; border-radius: 4px; text-align:center;">
+                <div style="color:#888; font-size:0.55rem;">OS</div>
+                <div style="color:#ddd; font-size:0.7rem; font-weight:600;">CachyOS</div>
+              </div>
+              <div style="background:#2a2a2a; padding: 4px 10px; border-radius: 4px; text-align:center;">
+                <div style="color:#888; font-size:0.55rem;">CPU</div>
+                <div style="color:#ddd; font-size:0.7rem; font-weight:600;">Ryzen 5 5600X</div>
+              </div>
+              <div style="background:#2a2a2a; padding: 4px 10px; border-radius: 4px; text-align:center;">
+                <div style="color:#888; font-size:0.55rem;">RAM</div>
+                <div style="color:#ddd; font-size:0.7rem; font-weight:600;">31GB</div>
+              </div>
+              <div style="background:#2a2a2a; padding: 4px 10px; border-radius: 4px; text-align:center;">
+                <div style="color:#888; font-size:0.55rem;">GPU</div>
+                <div style="color:#ddd; font-size:0.7rem; font-weight:600;">RX 9070 XT</div>
+              </div>
+              <div style="background:#2a2a2a; padding: 4px 10px; border-radius: 4px; text-align:center;">
+                <div style="color:#888; font-size:0.55rem;">Driver</div>
+                <div style="color:#ddd; font-size:0.7rem; font-weight:600;">Mesa 24.3.4</div>
+              </div>
+              <div style="background:#2a2a2a; padding: 4px 10px; border-radius: 4px; text-align:center;">
+                <div style="color:#888; font-size:0.55rem;">Kernel</div>
+                <div style="color:#ddd; font-size:0.7rem; font-weight:600;">7.0.8-cachyos</div>
+              </div>
+            </div>
+            <div class="d-game">
+              <div class="img">Nobody Wants to Die<br>182x69 img</div>
+              <div class="info">
+                <p class="t">Nobody Wants to Die</p>
+                <p class="g">Noir / Drama</p>
+                <span class="badge green">playing</span>
+                <p class="note">Short detective story, perfect palate cleanser after Spider-Man.</p>
+                <span class="link">View on Steam →</span>
+              </div>
+            </div>
+            <div class="d-game">
+              <div class="img">Tomb Raider 2013<br>182x69 img</div>
+              <div class="info">
+                <p class="t">Tomb Raider (2013)</p>
+                <p class="g">Action-Adventure</p>
+                <span class="badge blue">next</span>
+                <p class="note">Next up after NWTD. May slip to July.</p>
+                <span class="link">View on Steam →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C: Current Design</h3>
+      <p>What we have now — purple Docusaurus theme, small GameCards with pill badges, grid spec chips. For reference.</p>
+    </div>
+  </div>
+</div>
+```
