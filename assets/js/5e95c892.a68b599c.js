@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgaming_calendar=self.webpackChunkgaming_calendar||[]).push([["668"],{6569(e,a,r){r.r(a),r.d(a,{default:()=>t});var s=r(4848);r(6540);var n=r(4164),c=r(4308),u=r(8287),l=r(2831),d=r(1085);function t(e){return(0,s.jsx)(c.e3,{className:(0,n.A)(u.G.wrapper.docsPages),children:(0,s.jsx)(d.A,{children:(0,l.v)(e.route.routes)})})}}}]);
