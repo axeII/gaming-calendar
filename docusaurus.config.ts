@@ -42,7 +42,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/logo.svg',
     colorMode: {
       respectPrefersColorScheme: true,
       defaultMode: 'dark',
@@ -54,6 +54,11 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        {
+          to: '/docs/now-playing',
+          position: 'left',
+          label: 'Now Playing',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'calendarSidebar',
@@ -78,12 +83,29 @@ const config: Config = {
               to: '/docs/now-playing',
             },
             {
+              label: 'June 2026',
+              to: '/docs/monthly/2026-06-june',
+            },
+            {
               label: 'Shopping List',
               to: '/docs/shopping',
             },
             {
               label: 'Beers & Friends',
               to: '/docs/beers-and-friends',
+            },
+          ],
+        },
+        {
+          title: 'Quick Links',
+          items: [
+            {
+              label: 'Mood Cheat Sheet',
+              to: '/docs/mood-cheat-sheet',
+            },
+            {
+              label: 'Notes & Overflow',
+              to: '/docs/notes',
             },
           ],
         },
@@ -97,7 +119,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Gaming Calendar © ${new Date().getFullYear()}. Built with Docusaurus.`,
+      copyright: `Gaming Calendar © ${new Date().getFullYear()} · axeII`,
     },
     prism: {
       theme: prismThemes.github,

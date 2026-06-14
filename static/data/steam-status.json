@@ -1,0 +1,6 @@
+{
+  "fetchedAt": "2026-06-14T12:00:00.000Z",
+  "totalCount": 0,
+  "games": [],
+  "note": "Set STEAM_API_KEY and STEAM_ID in GitHub secrets, then run npm run fetch-steam to populate live data."
+}
